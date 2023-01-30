@@ -1,0 +1,20 @@
+{
+  "name": "state-mngmt-mfe",
+  "version": "1.0.0",
+  "author": "Jeffrey Bernadas",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others-on-fail \"npm run core\" \"npm run dashboard\" \"npm run login\" \"npm run pending-transactions\" \"npm run store\" \"npm run host\"",
+    "core": "cd core && npm start",
+    "dashboard": "cd dashboard && npm start",
+    "login": "cd login && npm start",
+    "pending-transactions": "cd pending-transactions && npm start",
+    "store": "cd store && npm start",
+    "host": "cd host && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
