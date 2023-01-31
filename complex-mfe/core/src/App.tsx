@@ -1,9 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { MBOAppBar, Button, TextField, Typography, Grid, MBODrawer } from "./components";
+import {
+  MBOAppBar,
+  Button,
+  TextField,
+  Typography,
+  Grid,
+  MBODrawer,
+  TextAvatar,
+  CircularProgress2,
+} from "./components";
 import { Box, Container } from "./layout";
 
 import "./index.scss";
+import { CircularProgress } from "@mui/material";
 
 const App = () => (
   <div className="mt-10 text-3xl mx-auto max-w-6xl">
@@ -23,6 +33,10 @@ const App = () => (
           <Typography>Typography</Typography>
         </Grid>
       </Grid>
+      <TextAvatar text="Y" isSelected />
+      <TextAvatar text="N" isSelected={false} />
+      <CircularProgress />
+      <CircularProgress2 size={60}/>
     </Container>
   </div>
 );
