@@ -13,7 +13,7 @@ import GradingIcon from "@mui/icons-material/Grading";
 
 const drawerWidth = 210;
 
-export const MBODrawer = () => {
+const MBODrawer = () => {
   return (
     <Drawer
       variant="permanent"
@@ -53,3 +53,5 @@ export const MBODrawer = () => {
     </Drawer>
   );
 };
+
+export default MBODrawer;

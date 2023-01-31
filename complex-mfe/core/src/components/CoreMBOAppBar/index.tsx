@@ -9,7 +9,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-export const MBOAppBar = () => {
+const MBOAppBar = () => {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
@@ -60,3 +60,5 @@ export const MBOAppBar = () => {
     </AppBar>
   );
 };
+
+export default MBOAppBar;
