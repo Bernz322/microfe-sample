@@ -42,9 +42,9 @@ interface Props {
   value?: number;
 
   // The variant of the loader - default is indeterminate
-  // determinate - the loader is spinning and the value is shown
-  // indeterminate - the loader is spinning
-  // static - the loader is not spinning and the value is shown
+  // determinate - the loader will spin with clear information about the progression
+  // indeterminate - the loader spins with unclear information about the progression (no indicator of progress)
+  // static - the loader will not spin and will reflect the value passed
   variant?: "determinate" | "indeterminate" | "static";
 
   // Any other props to be passed to the loader container
@@ -135,7 +135,7 @@ const StyledProgressContainer = styled("div", {
   display: "inline-block",
   lineHeight: 1,
   transition:
-    variant === "static" ? "none" : theme.transitions.create("transform"),
+    variant === "static" ? theme.transitions.create("transform") : "none",
   animation:
     variant === "indeterminate"
       ? "mui-progress-circular-rotate2 1.4s linear infinite"
@@ -165,8 +165,8 @@ const StyledCircle = styled("circle", {
   stroke: "currentColor",
   transition:
     variant === "static"
-      ? "none"
-      : theme.transitions.create("stroke-dashoffset"),
+      ? theme.transitions.create("stroke-dashoffset")
+      : "none",
   animation:
     variant === "indeterminate"
       ? "mui-progress-circular-dash2 1.4s ease-in-out infinite"
